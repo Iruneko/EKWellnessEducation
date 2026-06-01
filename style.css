@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7f1;
+  color: #2f3b32;
+}
+
+header {
+  background-color: #8fa58a;
+  padding: 20px;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  margin: 0;
+  color: white;
+  font-size: 26px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #edf5e8;
+  text-decoration: underline;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #40513f;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-image {
+  width: 45%;
+  max-width: 480px;
+  border-radius: 22px;
+  box-shadow: 0 8px 18px rgba(70, 90, 60, 0.18);
+}
+
+.category-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.category-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #40513f;
+  margin-bottom: 35px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.category-card {
+  background-color: white;
+  border: 2px solid #d2ddca;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 6px 14px rgba(70, 90, 60, 0.12);
+}
+
+.category-card h3 {
+  font-size: 28px;
+  color: #5f765a;
+  margin-top: 0;
+}
+
+.category-card p {
+  line-height: 1.6;
+}
+
+.challenge-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.challenge-page h2 {
+  font-size: 40px;
+  color: #40513f;
+  margin-bottom: 10px;
+}
+
+.date-text {
+  color: #6f856a;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.quiz-box {
+  background-color: #eef4ea;
+  border-left: 6px solid #8fa58a;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.large-quiz {
+  max-width: 650px;
+  margin: 20px auto 30px auto;
+}
+
+.quiz-box h3 {
+  margin-top: 0;
+  color: #40513f;
+}
+
+.math-question,
+.challenge-question {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+}
+
+textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 15px;
+  border: 2px solid #d2ddca;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.teacher-note {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 20px;
+  background-color: #fffaf0;
+  border: 2px dashed #c8b98a;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.teacher-note h3 {
+  margin-top: 0;
+  color: #6f5f32;
+}
+
+.button {
+  display: inline-block;
+  background-color: #8fa58a;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #6f856a;
+}
+
+footer {
+  text-align: center;
+  background-color: #40513f;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Mobile view */
+@media screen and (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-page h2 {
+    font-size: 32px;
+  }
+
+  .math-question,
+  .challenge-question {
+    font-size: 21px;
+  }
+}
+.teacher-note {
+  display: none;
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 20px;
+  background-color: #fffaf0;
+  border: 2px dashed #c8b98a;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.teacher-note h3 {
+  margin-top: 0;
+  color: #6f5f32;
+}
+
+.submit-button {
+  display: inline-block;
+  background-color: #8fa58a;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #6f856a;
+}

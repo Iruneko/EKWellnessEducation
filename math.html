@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Daily Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <h1>E&K Wellness Education</h1>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="math.html">Math</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="health.html">Health</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="challenge-page">
+      <h2>Math Daily Challenge</h2>
+      <p class="date-text">Today’s Challenge</p>
+
+      <div class="quiz-box large-quiz">
+        <h3>Solve from Scratch</h3>
+
+        <p class="math-question">
+          If X<sup>X</sup> = 3<sup>18</sup>, what is X?
+        </p>
+
+        <p>
+          Show your steps and explain how you found the answer.
+        </p>
+
+        <textarea placeholder="Write your solution here..."></textarea>
+
+        <button type="button" class="submit-button" onclick="showAnswer()">
+          Submit Answer
+        </button>
+      </div>
+
+      <div class="teacher-note" id="answer-key">
+        <h3>Answer Key</h3>
+
+        <p>
+          Since 9 = 3<sup>2</sup>, then
+          9<sup>9</sup> = (3<sup>2</sup>)<sup>9</sup> = 3<sup>18</sup>.
+          Therefore, X = 9.
+        </p>
+      </div>
+
+      <a href="index.html" class="button">Back to Categories</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 E&K Wellness Education</p>
+  </footer>
+
+  <script>
+    function showAnswer() {
+      document.getElementById("answer-key").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
