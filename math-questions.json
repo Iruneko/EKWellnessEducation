@@ -1,0 +1,24 @@
+[
+  {
+    "date": "2026-06-01",
+    "dateLabel": "Today’s Challenge",
+    "title": "Solve from Scratch",
+    "questionHtml": "If X<sup>X</sup> = 3<sup>18</sup>, what is X?",
+    "instructionHtml": "Read the question carefully. The goal is not just to calculate 3<sup>18</sup>. Find the value of X and explain your steps.",
+    "level": "Algebra",
+    "time": "10 minutes",
+    "focus": "Exponents",
+    "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
+  },
+  {
+    "date": "2026-06-02",
+    "dateLabel": "Today’s Challenge",
+    "title": "Solve from Scratch",
+    "questionHtml": "If (x - 1)<sup>x</sup> = 81, what is x?",
+    "instructionHtml": "Read the question carefully. Find the value of x and explain your steps.",
+    "level": "Algebra",
+    "time": "10 minutes",
+    "focus": "Exponents",
+    "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
+  }
+]

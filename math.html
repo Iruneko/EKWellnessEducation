@@ -16,9 +16,10 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="math.html">Math</a></li>
-        <li><a href="chemistry.html">Chemistry</a></li>
-        <li><a href="finance.html">Finance</a></li>
-        <li><a href="health.html">Health</a></li>
+        <li><a href="weekly-quiz.html">Weekly Quiz</a></li>
+        <li><a href="monthly-exam.html">Monthly Exam</a></li>
+        <li><a href="submit.html">Submit</a></li>
+        <li><a href="answer.html">Answers</a></li>
       </ul>
     </nav>
   </header>
@@ -27,37 +28,36 @@
 
     <section class="challenge-page">
       <h2>Math Daily Challenge</h2>
-      <p class="date-text">Today’s Challenge</p>
+      <p class="date-text" id="date-text">Today’s Challenge</p>
 
       <div class="quiz-box large-quiz">
-        <h3>Solve from Scratch</h3>
+        <h3 id="challenge-title">Loading...</h3>
 
-        <p class="math-question">
-          If X<sup>X</sup> = 3<sup>18</sup>, what is X?
+        <p class="math-question" id="math-question">
+          Loading today's question...
         </p>
 
-        <p>
-          Show your steps and explain how you found the answer.
+        <p id="instruction-text">
+          Please wait while the challenge loads.
         </p>
 
-        <textarea placeholder="Write your solution here..."></textarea>
+        <div class="info-row">
+          <span id="level-text">Level:</span>
+          <span id="time-text">Time:</span>
+          <span id="focus-text">Focus:</span>
+        </div>
 
-        <button type="button" class="submit-button" onclick="showAnswer()">
-          Submit Answer
-        </button>
+        <a href="submit.html" class="submit-button">Submit Your Answer</a>
       </div>
 
-      <div class="teacher-note" id="answer-key">
-        <h3>Answer Key</h3>
-
-        <p>
-          Since 9 = 3<sup>2</sup>, then
-          9<sup>9</sup> = (3<sup>2</sup>)<sup>9</sup> = 3<sup>18</sup>.
-          Therefore, X = 9.
+      <div class="teacher-note visible-note">
+        <h3>Teacher Note</h3>
+        <p id="teacher-note">
+          The answer and explanation will be posted on the Answer page after 2 days.
         </p>
       </div>
 
-      <a href="index.html" class="button">Back to Categories</a>
+      <a href="index.html" class="button">Back to Home</a>
     </section>
 
   </main>
@@ -67,9 +67,36 @@
   </footer>
 
   <script>
-    function showAnswer() {
-      document.getElementById("answer-key").style.display = "block";
-    }
+    fetch("math-questions.json")
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(questions) {
+        const today = new Date().toISOString().split("T")[0];
+
+        let todayQuestion = questions.find(function(item) {
+          return item.date === today;
+        });
+
+        if (!todayQuestion) {
+          todayQuestion = questions[questions.length - 1];
+        }
+
+        document.getElementById("date-text").textContent = todayQuestion.dateLabel;
+        document.getElementById("challenge-title").textContent = todayQuestion.title;
+        document.getElementById("math-question").innerHTML = todayQuestion.questionHtml;
+        document.getElementById("instruction-text").innerHTML = todayQuestion.instructionHtml;
+        document.getElementById("level-text").textContent = "Level: " + todayQuestion.level;
+        document.getElementById("time-text").textContent = "Time: " + todayQuestion.time;
+        document.getElementById("focus-text").textContent = "Focus: " + todayQuestion.focus;
+        document.getElementById("teacher-note").textContent = todayQuestion.teacherNote;
+      })
+      .catch(function(error) {
+        document.getElementById("challenge-title").textContent = "Challenge Not Available";
+        document.getElementById("math-question").textContent = "The math challenge could not be loaded.";
+        document.getElementById("instruction-text").textContent = "Please check that math-questions.json is in the same folder as math.html.";
+        console.error("Error loading math question:", error);
+      });
   </script>
 
 </body>
