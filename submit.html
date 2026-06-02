@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Answer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <h1>E&K Wellness Education</h1>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="math.html">Math</a></li>
+        <li><a href="weekly-quiz.html">Weekly Quiz</a></li>
+        <li><a href="monthly-exam.html">Monthly Exam</a></li>
+        <li><a href="submit.html">Submit</a></li>
+        <li><a href="answer.html">Answers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="challenge-page">
+      <h2>Submit Your Answer</h2>
+      <p class="date-text">Math Answer Form</p>
+
+      <div class="quiz-box large-quiz">
+        <h3>Send Your Work to the Teacher</h3>
+        <p>
+          Type your answer and explain your steps. Use the math buttons if you need symbols.
+        </p>
+
+        <!-- Change teacher@example.com to the real teacher email. -->
+        <form action="mailto:yurerisumoko@gmail.com" method="post" enctype="text/plain">
+          <label for="student-name">Your Name</label>
+          <input type="text" id="student-name" name="Student Name" required>
+
+          <label for="challenge-type">Challenge Type</label>
+          <select id="challenge-type" name="Challenge Type">
+            <option value="Daily Math Challenge">Daily Math Challenge</option>
+            <option value="Weekly Math Quiz">Weekly Math Quiz</option>
+            <option value="Monthly Math Exam">Monthly Math Exam</option>
+          </select>
+
+          <label for="answer">Your Answer</label>
+          <div class="symbol-buttons">
+            <button type="button" onclick="insertSymbol('x')">x</button>
+            <button type="button" onclick="insertSymbol('y')">y</button>
+            <button type="button" onclick="insertSymbol('n')">n</button>
+            <button type="button" onclick="insertSymbol('²')">x²</button>
+            <button type="button" onclick="insertSymbol('³')">x³</button>
+            <button type="button" onclick="insertSymbol('^')">^</button>
+            <button type="button" onclick="insertSymbol('√')">√</button>
+            <button type="button" onclick="insertSymbol('π')">π</button>
+            <button type="button" onclick="insertSymbol('θ')">θ</button>
+            <button type="button" onclick="insertSymbol('÷')">÷</button>
+            <button type="button" onclick="insertSymbol('×')">×</button>
+            <button type="button" onclick="insertSymbol('=')">=</button>
+            <button type="button" onclick="insertSymbol('≠')">≠</button>
+            <button type="button" onclick="insertSymbol('≤')">≤</button>
+            <button type="button" onclick="insertSymbol('≥')">≥</button>
+            <button type="button" onclick="insertSymbol('±')">±</button>
+            <button type="button" onclick="insertSymbol('∞')">∞</button>
+            <button type="button" onclick="insertSymbol('( )')">( )</button>
+            <button type="button" onclick="insertSymbol(' / ')">fraction</button>
+          </div>
+
+          <textarea id="answer" name="Answer" rows="7" placeholder="Example: X = 9" required></textarea>
+
+          <label for="steps">Explain Your Steps</label>
+          <textarea id="steps" name="Steps" rows="8" placeholder="Explain how you solved the problem step by step." required></textarea>
+
+          <button type="submit" class="submit-button">Send to Teacher</button>
+        </form>
+      </div>
+
+      <div class="teacher-note visible-note">
+        <h3>Important Note</h3>
+        <p>
+          This simple form uses the student’s email app. For a real website, a Google Form, Formspree, or another backend tool would work better.
+        </p>
+      </div>
+
+      <a href="index.html" class="button">Back to Home</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 E&K Wellness Education</p>
+  </footer>
+
+  <script>
+    let activeBox = document.getElementById("answer");
+
+    document.getElementById("answer").addEventListener("focus", function() {
+      activeBox = this;
+    });
+
+    document.getElementById("steps").addEventListener("focus", function() {
+      activeBox = this;
+    });
+
+    function insertSymbol(symbol) {
+      activeBox.value += symbol;
+      activeBox.focus();
+    }
+  </script>
+
+</body>
+</html>
