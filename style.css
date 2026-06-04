@@ -29,7 +29,7 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px;
+  gap: 18px;
 }
 
 nav a {
@@ -56,6 +56,13 @@ nav a:hover {
   flex: 1;
 }
 
+.small-label {
+  color: #6f856a;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .hero h2 {
   font-size: 42px;
   margin-bottom: 15px;
@@ -74,17 +81,26 @@ nav a:hover {
   box-shadow: 0 8px 18px rgba(70, 90, 60, 0.18);
 }
 
-.category-section {
+.category-section,
+.coming-section {
   max-width: 1100px;
   margin: 0 auto;
   padding: 50px 20px;
 }
 
-.category-section h2 {
+.category-section h2,
+.coming-section h2 {
   text-align: center;
   font-size: 32px;
   color: #40513f;
   margin-bottom: 35px;
+}
+
+.coming-section {
+  text-align: center;
+  background-color: #eef4ea;
+  border-radius: 18px;
+  margin-bottom: 40px;
 }
 
 .card-container {
@@ -157,16 +173,73 @@ nav a:hover {
   line-height: 1.5;
 }
 
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.info-row span {
+  background-color: white;
+  border: 1px solid #d2ddca;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.quiz-list {
+  line-height: 2;
+  font-size: 18px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  color: #40513f;
+}
+
+input,
+select,
 textarea {
   width: 100%;
-  min-height: 160px;
-  padding: 15px;
+  padding: 12px;
   border: 2px solid #d2ddca;
   border-radius: 12px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   box-sizing: border-box;
+}
+
+textarea {
+  min-height: 140px;
   resize: vertical;
+}
+
+.symbol-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 5px 0;
+}
+
+.symbol-buttons button {
+  background-color: white;
+  color: #40513f;
+  border: 1px solid #b7c7b1;
+  border-radius: 10px;
+  padding: 8px 11px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.symbol-buttons button:hover {
+  background-color: #dce8d6;
 }
 
 .teacher-note {
@@ -184,7 +257,16 @@ textarea {
   color: #6f5f32;
 }
 
-.button {
+.visible-note {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.button,
+.submit-button {
   display: inline-block;
   background-color: #8fa58a;
   color: white;
@@ -192,9 +274,14 @@ textarea {
   padding: 12px 18px;
   border-radius: 25px;
   font-weight: bold;
+  border: none;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.submit-button:hover {
   background-color: #6f856a;
 }
 
@@ -219,12 +306,21 @@ footer {
     gap: 10px;
   }
 
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
   .hero h2 {
     font-size: 32px;
   }
 
   .hero p {
     font-size: 16px;
+  }
+
+  .hero-image {
+    width: 100%;
   }
 
   .card-container {
@@ -239,36 +335,33 @@ footer {
   .challenge-question {
     font-size: 21px;
   }
+
+  .quiz-list {
+    font-size: 16px;
+  }
 }
-.teacher-note {
-  display: none;
-  max-width: 650px;
-  margin: 25px auto;
-  padding: 20px;
-  background-color: #fffaf0;
-  border: 2px dashed #c8b98a;
-  border-radius: 12px;
-  text-align: left;
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 1.1em;
+  margin: 0 6px;
 }
 
-.teacher-note h3 {
-  margin-top: 0;
-  color: #6f5f32;
+.fraction .top {
+  border-bottom: 2px solid #1f3a2e;
+  padding: 0 12px 4px;
+  line-height: 1;
 }
 
-.submit-button {
-  display: inline-block;
-  background-color: #8fa58a;
-  color: white;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 25px;
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 15px;
-  cursor: pointer;
+.fraction .bottom {
+  padding-top: 4px;
+  line-height: 1;
 }
 
-.submit-button:hover {
-  background-color: #6f856a;
+.paren {
+  font-size: 1.8em;
+  vertical-align: middle;
+  margin: 0 3px;
 }
