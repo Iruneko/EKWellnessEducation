@@ -20,16 +20,27 @@
     "time": "10 minutes",
     "focus": "Exponents",
     "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
-   },
+  },
   {
-  "date": "2026-06-03",
-  "dateLabel": "Today’s Challenge",
-  "title": "Solve from Scratch",
-  "questionHtml": "<span class=\"paren\">(</span><span class=\"fraction\"><span class=\"top\">27</span><span class=\"bottom\">x - 2</span></span><span class=\"paren\">)</span><sup>2</sup> = x - 2",
-  "instructionHtml": "Read the question carefully. Find the value of x and explain your steps.",
-  "level": "Algebra",
-  "time": "10 minutes",
-  "focus": "Equations and Exponents",
-  "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
-}
+    "date": "2026-06-03",
+    "dateLabel": "Today’s Challenge",
+    "title": "Solve from Scratch",
+    "questionHtml": "<span class=\"paren\">(</span><span class=\"fraction\"><span class=\"top\">27</span><span class=\"bottom\">x - 2</span></span><span class=\"paren\">)</span><sup>2</sup> = x - 2",
+    "instructionHtml": "Read the question carefully. Find the value of x and explain your steps.",
+    "level": "Algebra",
+    "time": "10 minutes",
+    "focus": "Equations and Exponents",
+    "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
+  },
+  {
+    "date": "2026-06-04",
+    "dateLabel": "Today’s Challenge",
+    "title": "Solve from Scratch",
+    "questionHtml": "5<sup>x<sup>2</sup> - 49</sup> = 1",
+    "instructionHtml": "Read the question carefully. Find the value of x and explain your steps.",
+    "level": "Algebra",
+    "time": "10 minutes",
+    "focus": "Exponents",
+    "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
+  }
 ]
