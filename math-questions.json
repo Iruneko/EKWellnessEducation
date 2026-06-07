@@ -53,5 +53,16 @@
     "time": "10 minutes",
     "focus": "Exponents",
     "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
+  },
+  {
+    "date": "2026-06-06",
+    "dateLabel": "Today’s Challenge",
+    "title": "Solve from Scratch",
+    "questionHtml": "3<sup>x</sup> - 3<sup>x - 1</sup> = 18",
+    "instructionHtml": "Read the question carefully. Find the value of x and explain your steps.",
+    "level": "Algebra",
+    "time": "10 minutes",
+    "focus": "Exponents",
+    "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
   }
 ]
