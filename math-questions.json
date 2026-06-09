@@ -64,5 +64,16 @@
     "time": "10 minutes",
     "focus": "Exponents",
     "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
+  },
+  {
+    "date": "2026-06-07",
+    "dateLabel": "Today’s Challenge",
+    "title": "Solve from Scratch",
+    "questionHtml": "If 9<sup>&radic;x</sup> = 3<sup>10</sup>, what is x?",
+    "instructionHtml": "Read the question carefully. Find the value of x and explain your steps.",
+    "level": "Algebra",
+    "time": "10 minutes",
+    "focus": "Exponents",
+    "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
   }
 ]
