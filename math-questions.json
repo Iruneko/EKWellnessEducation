@@ -75,5 +75,16 @@
     "time": "10 minutes",
     "focus": "Exponents",
     "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
-  }
+  },
+  {
+  "date": "2026-06-10",
+  "dateLabel": "Today’s Challenge",
+  "title": "Ladder Against a Wall",
+  "questionHtml": "A ladder leans against a wall. The ladder is 10 feet long, and it makes a 30&deg; angle with the ground. How high up the wall does the ladder reach?",
+  "instructionHtml": "Use trigonometry to find the height. Identify the hypotenuse and the side opposite the 30&deg; angle.",
+  "level": "Trigonometry",
+  "time": "10 minutes",
+  "focus": "Sine Ratio",
+  "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
+}
 ]
