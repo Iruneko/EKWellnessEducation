@@ -97,5 +97,16 @@
     "time": "10 minutes",
     "focus": "Exponents",
     "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
+  },
+  {
+  "date": "2026-06-11",
+    "dateLabel": "Today’s Challenge",
+    "title": "Solve from Scratch",
+    "questionHtml": "If 2<sup>&radic;2x</sup> + 2<sup>&radic;2x</sup> = 32, what is x?",
+    "instructionHtml": "Rewrite 9 as a power of 3, then solve step by step.",
+    "level": "Algebra",
+    "time": "10 minutes",
+    "focus": "Exponents",
+    "teacherNote": "The answer and explanation will be posted on the Answer page after 2 days. Try solving the problem first before checking the answer."
   }
   ]
